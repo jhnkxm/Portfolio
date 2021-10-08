@@ -69,13 +69,15 @@ workCategories.addEventListener("click", (event) => {
   if (filter == null) {
     return;
   }
-
-  projects.forEach((project) => {
-    if (filter === "all" || filter === project.dataset.type) {
-      project.classList.remove("invisible");
-    } else {
-      project.classList.add("invisible");
-    }
-  });
-  console.log(filter);
+  projectCategories.classList.add("anim-out");
+  setTimeout(() => {
+    projects.forEach((project) => {
+      if (filter === "all" || filter === project.dataset.type) {
+        project.classList.remove("invisible");
+      } else {
+        project.classList.add("invisible");
+      }
+    });
+    projectCategories.classList.remove("anim-out");
+  }, 300);
 });
