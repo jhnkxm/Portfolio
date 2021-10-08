@@ -107,7 +107,8 @@ p {
 #navbar.navbar--dark {
  background-color: var(--color-beige);
  padding: 8px;
- opacity: 0.8;
+ opacity: 0.7;
+ z-index: 1;
 }
 .navbar__logo {
   font-size: var(--font-medium);
@@ -187,6 +188,7 @@ p {
 }
 
 /* About */
+
 .about__majors {
   display: flex;
   justify-content: space-between;
