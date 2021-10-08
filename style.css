@@ -93,14 +93,22 @@ p {
 
 /* Navbar */
 #navbar {
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-beige);
+  background-color: transparent;
   align-items: center;
   color: var(--color-white);
   padding: 16px;
+  transition: all var(--animmation-duration) ease-in-out;
 }
 
+#navbar.navbar--dark {
+ background-color: var(--color-beige);
+ padding: 8px;
+ opacity: 0.8;
+}
 .navbar__logo {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
@@ -141,6 +149,7 @@ p {
 #home {
   background: url("Imgs/home-background.png") center/cover no-repeat;
   padding: 40px;
+  padding-top: 120px;
   text-align: center;
 }
 .home__avatar {
