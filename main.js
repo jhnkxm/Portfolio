@@ -22,7 +22,19 @@ navbarMenu.addEventListener("click", (event) => {
   if (link == null) {
     return;
   }
+  navbarMenu.classList.remove("open");
   scrollIntoView(link);
+});
+
+// Toggle Button
+const toggleBtn = document.querySelector(".navbar__toggle-btn");
+toggleBtn.addEventListener("click", () => {
+  //   if (navbarMenu.style.display === "") {
+  //     navbarMenu.style.display = "block";
+  //   } else {
+  //     navbarMenu.style.display = "";
+  //   }
+  navbarMenu.classList.toggle("open");
 });
 
 // Handle click on "Contact Me" Btn on home
